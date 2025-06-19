@@ -1,0 +1,19 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "xprotocol",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "connectionTimeout": 30,
+            "database": "E-Web",
+            "username": "root",
+            "name": "MySQL_DB",
+            "password": "E-webAdminBatabase123"
+        }
+    ]
+}

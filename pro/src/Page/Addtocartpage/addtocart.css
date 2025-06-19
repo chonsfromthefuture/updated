@@ -1,0 +1,33 @@
+.addToCartPage {
+  padding: 2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  color: black;
+}
+
+.image{
+height: 1500px;
+
+
+}
+.cartItems {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1;
+}
+
+.cartItemWrapper {
+height: 700px;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+
+.CardItems {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}

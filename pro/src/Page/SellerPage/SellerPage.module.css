@@ -1,0 +1,76 @@
+/* frontend/src/pages/SellerPage/SellerPage.module.css */
+
+:root {
+  --header-height: 60px; /* Adjust if your Header component has a different fixed height */
+  --mobile-sidebar-height: 60px; /* Define mobile sidebar height */
+}
+
+/* --- Desktop/Computer/Tablet Styles (Default, for larger screens) --- */
+/* These styles are applied by default and define the desktop layout */
+
+.container {
+  display: flex;
+  flex-direction: row; /* Sidebar and content side-by-side */
+  min-height: calc(100vh - var(--header-height));
+  overflow: hidden; /* Prevent unwanted scrollbars in the main container */
+}
+
+.content {
+  flex-grow: 1; /* Content takes remaining space */
+  padding: 2rem;
+  background-color: #efe8d1;
+  overflow-y: auto; /* Allow content to scroll if it overflows */
+  /* This scrollbar needs to be present for IntersectionObserver to work reliably */
+}
+
+.content h2 {
+  color: #3a3320;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.content p {
+  color: #6d5e2c;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* --- Animation Styles --- */
+/* Initial state: hidden and slightly translated */
+.animatedWidget {
+  opacity: 0;
+  transform: translateY(20px); /* Start slightly below its final position */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Smooth transition */
+}
+
+/* State when it's in view: visible and in original position */
+.showWidget {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* --- Phone Specific Styles (Apply when screen is max 767px wide) --- */
+@media (max-width: 767px) {
+  .container {
+    flex-direction: column; /* Stack content and sidebar vertically */
+    /* Remove justify-content: space-between if sidebar is fixed, as it can conflict */
+    min-height: calc(100vh - var(--header-height));
+    /* Add padding-bottom to ensure content doesn't get hidden behind fixed sidebar */
+    padding-bottom: var(--mobile-sidebar-height); /* Adjust based on sidebar height */
+    box-sizing: border-box; /* Include padding in element's total width and height */
+  }
+
+  .content {
+    padding: 1rem; /* Adjust padding for mobile */
+    /* No flex-grow: 1 here if sidebar is fixed position and in a separate flow */
+  }
+
+  .content h2 {
+    font-size: 1.3rem; /* Smaller headings on mobile */
+  }
+
+  .content p {
+    font-size: 0.9rem; /* Smaller paragraph text on mobile */
+  }
+}

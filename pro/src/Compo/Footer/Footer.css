@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Roboto:wght@400;500&display=swap');
+
+footer {
+  font-family: 'Roboto', sans-serif;
+  width: 100%;
+  background: rgba(171, 147, 114, 0.97);
+  color: #333;
+  padding: 20px 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 40px; /* space above footer */
+}
+
+footer .col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  min-width: 200px;
+}
+
+footer .logo {
+  margin-bottom: 30px;
+}
+
+footer h4 {
+  font-family: 'Poppins', sans-serif; 
+  font-weight: 700; 
+  font-size: 17px;
+  padding-bottom: 10px;
+}
+
+footer p, footer a {
+  font-size: 13px;
+  margin-bottom: 8px;
+  color: #222;
+  text-decoration: none;
+}
+
+footer .follow {
+  margin-top: 20px;
+}
+
+footer .follow i {
+  color: #ffffff;
+  padding-right: 4px;
+  cursor: pointer;
+}
+
+footer .follow i:hover,
+footer a:hover {
+  color: #ffffff;
+}
+
+footer .copyright {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 12px;
+}

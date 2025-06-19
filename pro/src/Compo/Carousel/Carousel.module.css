@@ -1,0 +1,61 @@
+.fullscreenCarousel {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background-color: transparent;
+}
+
+.mySwiper {
+  width: 100%;
+  height: 100%;
+}
+
+.slideImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Hide navigation buttons initially */
+:global(.swiper-button-prev),
+:global(.swiper-button-next) {
+  color: #efe8d1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  height: 100%;
+  top: 0;
+  margin-top: 0;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
+
+/* Add black overlay on hover of button itself */
+:global(.swiper-button-prev:hover),
+:global(.swiper-button-next:hover) {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* Show buttons on hover of whole carousel */
+.fullscreenCarousel:hover :global(.swiper-button-prev),
+.fullscreenCarousel:hover :global(.swiper-button-next) {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Make pagination bullets white */
+:global(.swiper-pagination-bullet) {
+  background: #efe8d1 !important;
+  opacity: 0.6;
+  transition: opacity 0.3s;
+}
+
+/* Active bullet brighter */
+:global(.swiper-pagination-bullet-active) {
+  opacity: 1;
+}
