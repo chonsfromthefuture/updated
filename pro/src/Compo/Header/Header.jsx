@@ -11,6 +11,12 @@ const Header = ({ showSearchBar = true }) => { // Set default to true
     navigate(path);
   };
 
+  const handleLogout = () => {
+    localStorage.removeItem('user'); // Optional
+    navigate('/');
+  };
+
+
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
@@ -29,8 +35,9 @@ const Header = ({ showSearchBar = true }) => { // Set default to true
         <div className={styles.profile}>👤</div>
         <div className={styles.dropdown}>
           <ul>
-            <li onClick={() => handleNavigation('/Profile')}>Profile</li>
-            <li onClick={() => handleNavigation('/Login')}>Logout</li>
+            <li onClick={() => handleNavigation('/myprofile')}>Profile</li>
+            <li onClick={() => handleNavigation('/viewcart')}>View Cart</li>
+            <li onClick={handleLogout}>Logout</li>
             <li onClick={() => handleNavigation('/Items')}>Items</li>
           </ul>
         </div>

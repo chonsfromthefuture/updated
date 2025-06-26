@@ -43,7 +43,7 @@ export default function ProductDetails({ title, price, imageUrl, description, on
         </div>
 
         <button className="buy-button" onClick={onBuy}>
-          Buy Item
+          Add to Cart
         </button>
 
         {/* Product Info Section */}

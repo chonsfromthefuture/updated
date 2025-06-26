@@ -1,0 +1,72 @@
+.profile-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+}
+
+.subtitle {
+  color: gray;
+  margin-bottom: 1rem;
+}
+
+.profile-form {
+  display: flex;
+  gap: 2rem;
+}
+
+.form-left {
+  flex: 2;
+}
+
+.form-left label {
+  display: block;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.form-left input[type="text"],
+.form-left input[type="email"],
+.form-left input[type="tel"],
+.form-left input[type="date"] {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.25rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.gender-options {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.note {
+  font-size: 0.8rem;
+  color: gray;
+  margin-top: 0.25rem;
+}
+
+.save-btn {
+  margin-top: 2rem;
+  background-color: #4eef39;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-right {
+  flex: 1;
+  text-align: center;
+}
+
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}

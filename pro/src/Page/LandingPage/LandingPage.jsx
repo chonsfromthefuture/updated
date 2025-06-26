@@ -63,16 +63,14 @@ return (
           <div
             key={idx}
             className={styles.cardItem}
-            ref={(el) => (cardRefs.current[idx] = el)}
-            onClick={() => navigate("/cart")}   
-            style={{ cursor: "pointer" }}             
+            ref={(el) => (cardRefs.current[idx] = el)}             
           >
             <CardItem />
           </div>
         ))}
       </section>
     </main>
-
+        
     <Footer />
   </>
 );

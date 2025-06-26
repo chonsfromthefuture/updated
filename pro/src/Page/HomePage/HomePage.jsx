@@ -1,13 +1,16 @@
 // frontend/src/pages/HomePage/HomePage.jsx
 
 import { useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import Card from "../../Compo/CardItem/CardItem.jsx";
 import Header from "../../Compo/Header/Header.jsx"; // Make sure path is correct
 import Carousel from "../../Compo/Carousel/Carousel.jsx";
 import styles from "./HomePage.module.css";
 import Category from "../../Compo/CategoryNav/CategoryNav.jsx";
+import Footer from "../../Compo/Footer/Footer";
 
 export default function HomePage() {
+   const navigate = useNavigate();
   const navRef = useRef(null);
   const categoryRef = useRef(null);
   const cardRefs = useRef([]);
@@ -65,13 +68,14 @@ export default function HomePage() {
             key={index}
             ref={(el) => (cardRefs.current[index] = el)}
             className={styles.appearItem}
+            onClick={() => navigate("/cart")}   
+            style={{ cursor: "pointer" }}
           >
             <Card />
           </div>
         ))}
       </div>
-
-      <h1>Hello, this is the homepage</h1>
+<Footer />
     </div>
   
 );
