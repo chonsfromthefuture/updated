@@ -8,6 +8,7 @@ import SellerPage from "./Page/SellerPage/SellerPage";
 import SellerPageItem from "./Page/SellerPage/SellerPageItem";
 import ViewCart from "./Page/Viewcart/viewcart";
 import Myprofile from './Page/MyProfile/myprofile';
+import AdminDashboard from "./Page/adminpagetesting/admindashboard";
 import { useEffect } from "react";
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -29,6 +30,8 @@ function App() {
         <Route path="/signup" element={<SignupPage />} /> {/* Fixed spelling from 'SigUp' */}
         <Route path="/seller/home" element={<SellerPage />}/>
         <Route path="/seller/view-items" element={<SellerPageItem/>}/>
+        <Route path="/admindashboard" element={<AdminDashboard/>}/>
+
       </Routes>
     </Router>
   );
